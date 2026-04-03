@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Samba 🐾</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <div class="max-w-5xl mx-auto p-6 space-y-10">
+
+    <!-- Header -->
+    <section class="text-center">
+      <h1 class="text-5xl font-bold">🐾 Find Samba 🐾</h1>
+      <p class="text-xl mt-2">The Missing Capybara — "The Runner"</p>
+    </section>
+
+    <!-- Token Section -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-semibold mb-3">💰 Samba Coin</h2>
+      <p><strong>Ticker:</strong> $Samba</p>
+      <p><strong>Name:</strong> The Runner</p>
+      <p class="break-all"><strong>CA:</strong> G3jQqZfjcKfHkYePhXBqGb3vUBQPxXvfFvz6gHsNpump</p>
+      <button onclick="copyCA()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-xl">Copy Contract Address</button>
+    </section>
+
+    <!-- Story -->
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4">
+      <h2 class="text-2xl font-semibold">📖 Samba's Story</h2>
+
+      <p>
+        Samba, a brave nine-month-old capybara, escaped from Marwell Zoo near Winchester and has been on an incredible journey ever since.
+      </p>
+
+      <p>
+        For nearly two weeks, search teams have used thermal drones, specialist sniffer dogs, and community volunteers to try to locate her.
+      </p>
+
+      <p>
+        Her sister Tango was found quickly, but Samba — now known as "The Runner" — continues to explore freely.
+      </p>
+
+      <p>
+        Sightings have been reported in Owslebury, where locals, schoolchildren, and animal lovers are all helping in the search.
+      </p>
+
+      <p>
+        The zoo has promised not to give up. Similar events in the past took months, and Samba could still be safely out there.
+      </p>
+
+      <p class="font-semibold">
+        If you see Samba, report it immediately. Every sighting matters.
+      </p>
+    </section>
+
+    <!-- Actions -->
+    <section class="text-center space-y-4">
+      <h2 class="text-3xl font-bold">🐾 Help Bring Samba Home</h2>
+      <p>Share her story. Spread awareness. Support the mission.</p>
+
+      <div class="flex justify-center gap-4 flex-wrap">
+        <button onclick="alert('Report sightings to Marwell Zoo hotline')" class="px-4 py-2 bg-green-600 text-white rounded-xl">
+          Report a Sighting
+        </button>
+        <button onclick="sharePage()" class="px-4 py-2 border rounded-xl">
+          Share
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500 pt-6">
+      Built for animal lovers 🐾 | #FindSamba
+    </footer>
+
+  </div>
+
+  <script>
+    function copyCA() {
+      const ca = "G3jQqZfjcKfHkYePhXBqGb3vUBQPxXvfFvz6gHsNpump";
+      navigator.clipboard.writeText(ca);
+      alert("Contract address copied!");
+    }
+
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Find Samba 🐾",
+          text: "Help find Samba the missing capybara!",
+          url: window.location.href
+        });
+      } else {
+        alert("Copy the URL to share!");
+      }
+    }
+  </script>
+
+</body>
+</html>
